@@ -1,0 +1,200 @@
+/* General Styles */
+html {
+    font-size: 16px; /* Base font size (1rem = 16px by default) */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 1.25rem; /* 20px */
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem; /* 32px */
+}
+
+.container {
+    max-width: 50rem; /* 800px */
+    margin: 1.25rem auto; /* 20px */
+    padding: 1.25rem; /* 20px */
+    background: white;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* 2px 10px */
+}
+
+/* Front Page Styles */
+.front-header {
+    text-align: center;
+    background-color: #ff6347;
+    color: white;
+    padding: 1.25rem; /* 20px */
+}
+
+.logo {
+    max-width: 9.375rem; /* 150px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.front-container {
+    max-width: 50rem; /* 800px */
+    margin: 1.25rem auto; /* 20px */
+    padding: 1.25rem; /* 20px */
+    background: white;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* 2px 10px */
+    text-align: center;
+}
+
+.preview-images {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem; /* 10px */
+}
+
+.preview-images img {
+    max-width: 30%;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px */
+}
+
+.order-button button {
+    background-color: #ff6347;
+    color: white;
+    padding: 0.9375rem 1.875rem; /* 15px 30px */
+    border: none;
+    border-radius: 0.5rem; /* 8px */
+    font-size: 1.2rem; /* 19.2px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button button:hover {
+    background-color: #e5533d;
+}
+
+/* Back Button Styles */
+.back-button {
+    text-align: center;
+    margin-top: 1.25rem; /* 20px */
+}
+
+.back-button button {
+    background-color: #ff6347;
+    color: white;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    border: none;
+    border-radius: 0.5rem; /* 8px */
+    font-size: 1rem; /* 16px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button button:hover {
+    background-color: #e5533d;
+}
+
+/* Pizza Item Styles */
+.pizza-item {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem; /* 8px */
+    padding: 1rem; /* 16px */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.pizza-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px */
+}
+
+.pizza-item.selected {
+    border: 2px solid orange; /* Orange outline for selected pizza */
+    box-shadow: 0 0.25rem 0.625rem rgba(255, 165, 0, 0.5); /* Orange glow */
+    transform: scale(1.05); /* Slightly enlarge the selected item */
+}
+
+/* Floating Cart Styles */
+#cartBox {
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    width: 15rem; /* 240px */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* 2px 10px */
+    padding: 1rem; /* 16px */
+    z-index: 1000;
+}
+
+#cartBox h2 {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.5rem; /* 8px */
+    text-align: center;
+}
+
+#cart {
+    max-height: 15rem; /* 240px */
+    overflow-y: auto;
+    margin-bottom: 1rem; /* 16px */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1rem; /* 16px */
+}
+
+.cart-item button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    padding: 0.25rem 0.5rem; /* 4px 8px */
+    cursor: pointer;
+    font-size: 0.875rem; /* 14px */
+}
+
+.cart-item button:hover {
+    background-color: #e5533d;
+}
+
+#cartTotal {
+    font-size: 1.25rem; /* 20px */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem; /* 16px */
+}
+
+#checkoutButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0.5rem; /* 8px */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    font-size: 1rem; /* 16px */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#checkoutButton:hover {
+    background-color: #218838;
+}

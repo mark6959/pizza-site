@@ -1,0 +1,12 @@
+{
+    "header": "Order Your Pizza",
+    "menu": [
+        { "name": "Margherita", "price": 8.99, "image": "images/margherita_small.jpg" },
+        { "name": "Pepperoni", "price": 9.99, "image": "images/pepperoni_small.jpg" },
+        { "name": "Ranch Chicken", "price": 9.99, "image": "images/ranch_chicken_small.jpg" },
+        { "name": "Curry Chicken", "price": 10.99, "image": "images/curry_chicken_small.jpg" },
+        { "name": "Hawaiian", "price": 9.49, "image": "images/hawaiian_small.jpg" },
+        { "name": "Veggie Lovers", "price": 8.49, "image": "images/veggie_lovers_small.jpg" },
+        { "name": "Supreme", "price": 11.49, "image": "images/supreme_small.jpg" }
+    ]
+}

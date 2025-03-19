@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Pizza</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Ordering Page Section -->
+    <section id="orderPage">
+        <header>
+            <h1 id="headerTitle">Order Your Pizza</h1>
+        </header>
+        <div class="container">
+            <section class="pizza-selection">
+                <h2>Select Your Pizza</h2>
+                <div class="pizza-options" id="pizzaOptions">
+                    <!-- Pizza options will be dynamically generated here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Back to Front Page Button -->
+        <div class="back-button">
+            <button onclick="location.href='index.html'">Back to Front Page</button>
+        </div>
+    </section>
+
+    <!-- Floating Cart -->
+    <div id="cartBox">
+        <h2>Your Cart</h2>
+        <div id="cart">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cartTotal">Total: $0.00</div>
+        <button id="checkoutButton">Checkout</button>
+    </div>
+</body>
+</html>
