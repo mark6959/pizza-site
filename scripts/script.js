@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     let cart = []; // Array to store selected pizzas with quantities
 
+    // Load cart from sessionStorage if it exists
+    if (sessionStorage.getItem("cart")) {
+        cart = JSON.parse(sessionStorage.getItem("cart"));
+        updateCart(); // Update the cart display with the saved data
+    }
+
     async function fetchMenuData() {
         try {
             const response = await fetch('data/menu.json');
@@ -43,10 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Check if the pizza is already in the cart
         const existingPizza = cart.find(item => item.name === pizza.name);
         if (existingPizza) {
-            existingPizza.quantity += 1; // Increment the quantity
+            existingPizza.quantity += 1; // Increment the quantity by 1
         } else {
             cart.push({ ...pizza, quantity: 1 }); // Add new pizza with quantity 1
         }
+        saveCart(); // Save the cart to sessionStorage
         updateCart(); // Update the cart display
     }
 
@@ -74,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItem.querySelector(".remove-from-cart").addEventListener("click", (e) => {
                 const index = e.target.getAttribute("data-index");
                 cart.splice(index, 1); // Remove the pizza from the cart
+                saveCart(); // aSave the updated cart to sessionStorage
                 updateCart(); // Update the cart display
             });
 
@@ -84,6 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
         totalContainer.textContent = `Total: $${total.toFixed(2)}`;
     }
 
+    function saveCart() {
+        // Save the cart to sessionStorage
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+    }
+
     // Handle checkout button click
     function handleCheckout() {
         if (cart.length === 0) {
@@ -91,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             alert("Thank you for your order! Your pizzas will be delivered soon.");
             cart = []; // Clear the cart
+            saveCart(); // Clear the cart in sessionStorage
             updateCart(); // Update the cart display
         }
     }
